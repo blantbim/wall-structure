@@ -1,7 +1,5 @@
 package pl.awolny.wallstructure.main;
 
-import pl.awolny.wallstructure.main.Block;
-
 import java.util.Optional;
 import java.util.List;
 
