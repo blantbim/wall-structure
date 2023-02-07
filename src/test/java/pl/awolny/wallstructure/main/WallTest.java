@@ -24,21 +24,21 @@ class WallTest {
     }
 
     @Test
-    void testFindBlockByColorFindsBlock() {
+    void assertExistingBlockIsFound() {
         Assertions.assertTrue(wall.findBlockByColor("brown").isPresent());
     }
     @Test
-    void testFindBlockByColorFinds() {
-        Assertions.assertFalse(wall.findBlockByColor("green").isPresent());
+    void assertNonExistingBlockIsNotFound() {
+        Assertions.assertTrue(wall.findBlockByColor("green").isEmpty());
     }
 
     @Test
     void testFindBlocksByMaterial() {
-        Assertions.assertEquals(wall.findBlocksByMaterial("stone").size(), 2);
+        Assertions.assertEquals(2, wall.findBlocksByMaterial("stone").size());
     }
 
     @Test
     void testCount() {
-        Assertions.assertEquals(wall.count(), 4);
+        Assertions.assertEquals(4, wall.count());
     }
 }
